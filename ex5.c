@@ -16,13 +16,9 @@ int main(){
       execvp(argumentos[0], argumentos);
       break;
     default:
-      while(wait(&status)!=pid);
-      if(status==0){
-        printf("se esta ejecutando el beiby");
-
-      }else{
-        printf("error del beibi");
-      }
+     printf("PA \n");
+     status = wait(0);
+     printf("Status | pid  %d\n %d\n", status, pid);
   }
   exit(0);
 }
