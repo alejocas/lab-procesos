@@ -24,8 +24,9 @@ Realizar los siguientes ejercicios:
   > Al parecer dichas variaciones existen para que el programador tenga un abanico de opciones que le permita ser tan dinámico como quiera, pudiendo dotar de diversos parámetros de diversas maneras al proceso que esté invocando.
 5. Escriba ahora un programa que use ```wait()``` para esperar que el proceso hijo finalice su ejecución. ¿Cuál es el valor de retorno de la función ```wait()```?, ¿Qué pasa si usted usa la función ```wait``` en el hijo?
   > El valor de retorno de la función ```wait()``` es -1 si hubo un error, 0 si el hijo se esta ejecutando y mayor a 0 si la ejecución del hijo acabó. 
-  > Esta no es ejecutada, dado que este proceso hijo no tiene un hijo al cual esperar.
+  > Esta no es ejecutada desde el proceso hijo, dado que este proceso hijo no tiene un hijo al cual esperar.
 6. Haga un programa, como el del ejercicio anterior, con una breve modificación, la cual consiste en usar ```waitpid()``` en lugar de ```wait()```. ¿Cuándo podría ser ```waitpid()``` útil?
+  >```waitpid()```  tiene opciones para no bloquear, sino simplemente verificar y hacer otras cosas útiles que los demás no ofrecen, que pueden serle útiles según el funcionamiento de su programa.
 7. Escriba un programa que cree un proceso hijo y entonces en el proceso hijo cierre la salida estandar (```STDOUT FILENO```). ¿Qué pasa si el hijo llama ```printf()``` para imprimir alguna salida después de cerrar el descriptor?
 8. Escriba un programa que cree dos hijos y conecte la salida estándar de un hijo a la entrada estándar del otro usando la llamada a sistema ```pipe()```
 
