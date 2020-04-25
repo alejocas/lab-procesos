@@ -28,6 +28,7 @@ Realizar los siguientes ejercicios:
 6. Haga un programa, como el del ejercicio anterior, con una breve modificación, la cual consiste en usar ```waitpid()``` en lugar de ```wait()```. ¿Cuándo podría ser ```waitpid()``` útil?
   >```waitpid()```  tiene opciones para no bloquear, sino simplemente verificar y hacer otras cosas útiles que los demás no ofrecen, que pueden serle útiles según el funcionamiento de su programa.
 7. Escriba un programa que cree un proceso hijo y entonces en el proceso hijo cierre la salida estandar (```STDOUT FILENO```). ¿Qué pasa si el hijo llama ```printf()``` para imprimir alguna salida después de cerrar el descriptor?
+   >Lo que sucede es que, al estar cerrado el descriptor para enviar mensajes a la salida estándar, la función ```printf()``` no tiene manera de escribir el mensaje que se le envía de ahí en adelante.
 8. Escriba un programa que cree dos hijos y conecte la salida estándar de un hijo a la entrada estándar del otro usando la llamada a sistema ```pipe()```
 
 ## 3. Entregable ##
