@@ -30,6 +30,7 @@ Realizar los siguientes ejercicios:
 7. Escriba un programa que cree un proceso hijo y entonces en el proceso hijo cierre la salida estandar (```STDOUT FILENO```). ¿Qué pasa si el hijo llama ```printf()``` para imprimir alguna salida después de cerrar el descriptor?
   >Lo que sucede es que, al estar cerrado el descriptor para enviar mensajes a la salida estándar, la función ```printf()``` no tiene manera de escribir el mensaje que se le envía de ahí en adelante.
 8. Escriba un programa que cree dos hijos y conecte la salida estándar de un hijo a la entrada estándar del otro usando la llamada a sistema ```pipe()```
+  >Hecho en el ejercicio ex8.c
 
 ## 3. Entregable ##
 
